@@ -1,0 +1,97 @@
+@media (min-width: 1600px) {
+}
+
+@media (max-width: 1440px) {
+}
+@media (max-width: 1200px) {
+  .mainHeadingArea .heading1 {
+    font-size: 100px;
+  }
+  .mainHeadingArea .heading2 {
+    font-size: 80px;
+  }
+  .heading2 img {
+    width: 35px;
+  }
+  .mainHeadingArea .heading3 {
+    font-size: 20px;
+  }
+  .date .inner {
+    font-size: 35px;
+  }
+  .date .inner h5 {
+    font-size: 50px;
+  }
+  .date .inner h5 sup {
+    font-size: 30px;
+  }
+  .address {
+    width: 100%;
+    height: 80px;
+    padding: 0 25px;
+    font-size: 20px;
+  }
+  .item-list li {
+    font-size: 30px;
+  }
+  form {
+    padding: 30px 40px;
+  }
+  form article h2 {
+    font-size: 40px;
+  }
+  form article p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  form {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  .item-list li span {
+    margin: 0 20px;
+  }
+  form {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+}
+
+@media (max-width: 480px) {
+  .mainHeadingArea .heading1 {
+    font-size: 70px;
+  }
+  .mainHeadingArea .heading2 {
+    font-size: 50px;
+  }
+  .mainHeadingArea .heading3 {
+    font-size: 16px;
+  }
+  .item-list li {
+    font-size: 18px;
+  }
+  .item-list li span {
+    width: 8px;
+    height: 8px;
+    margin: 0 10px;
+  }
+  form {
+    padding: 30px 20px;
+  }
+  form article h2 {
+    font-size: 24px;
+  }
+  form article p {
+    font-size: 14px;
+  }
+}

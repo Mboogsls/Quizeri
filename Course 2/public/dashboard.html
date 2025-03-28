@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoShare Networking </title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/Bootstrap/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="assets/css/animation.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+    <main class="overflow-hidden">
+        <header class="py-3 mb-3 border-bottom">
+            <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+              <div class="">
+                <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                  <h2 class="text-primary"><strong>SOSHARE</strong></h2>
+                </a>
+              </div>
+        
+              <div class="d-flex align-items-center">
+                <form class="w-100 me-3" role="search">
+                  <input id="searchInput" type="search" class="form-control" placeholder="Search Image Content..." aria-label="Search">
+                </form>
+        
+              </div>
+            </div>
+          </header>
+          <div class="container-fluid pb-3">
+            <div class="d-grid gap-3 mb-3" style="grid-template-columns: 1fr 2fr;">
+              <div class="bg-body-tertiary border rounded-3">
+                <form id="uploadForm" novalidate="" onsubmit="return false" class="container text-center mb-4 mt-3">
+                    
+                    <img id="imagePreview" class="mt-2 mb-3 rounded border" style="display: none; max-width: 100px; max-height: 100px;">
+
+                    <label for="fileInput" class="custom-file-upload">
+                        <div class="upload-box d-flex flex-column align-items-center justify-content-center">
+                            <i class="bi bi-upload display-4 text-primary"></i>
+                            <p class="mb-0 text-muted"><strong>CLICK TO UPLOAD</strong></p>
+                        </div>
+                    </label>
+                    <input type="file" id="fileInput" name="file" class="d-none" required>
+                    <button type="submit" class="btn btn-primary mt-3 w-100">Upload</button>
+                </form>
+              </div>
+              <div class="bg-body-tertiary border rounded-3 row">
+                 <div id="fileList"></div>
+                </div>
+            </div>
+             
+          </div>
+          <div class="container-fluid pb-3 bg-body-tertiary border rounded-3">
+            <div class="d-flex justify-content-center row mt-3">
+                <form class="mb-3 col-md-6" role="search">
+                  <input id="searchUser" type="search" class="form-control" placeholder="Search Users..." aria-label="Search">
+                </form>
+        
+              </div>
+            <div id="userList" class="row"></div>
+          </div>
+     
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/Bootstrap/bootstrap.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="assets/js/jQuery/jquery-3.7.1.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+
+
+  </body>
+</html>
