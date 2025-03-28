@@ -1,5 +1,6 @@
 const STUDENT_ID = "M00872711";
-const API_URL = `http://localhost:8080/${STUDENT_ID}`;
+//const API_URL = `http://localhost:8080/${STUDENT_ID}`;
+const API_URL = `https://sostore.onrender.com/${STUDENT_ID}`;
 let token = localStorage.getItem("token");
 
 $(document).ready(function () {
