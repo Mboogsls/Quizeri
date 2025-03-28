@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/Bootstrap/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/quiz-style.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="assets/css/quiz-animation.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="assets/css/quiz-responsive.css">
+
+    <!-- result CSS -->
+    <link rel="stylesheet" href="assets/css/quiz-result.css">
+  </head>
+  <body>
+    <main class="overflow-hidden">
+      <!-- CountDOwn -->
+      <div class="counterContainer">
+        <svg class="counter">
+          <circle cx="50%" cy="50%" r="70"></circle>
+        </svg>
+        <span class="countText"><span id="countdown-timer">60</span>
+          sec
+        </span>
+      </div>
+
+      <!-- form Start -->
+      <section class="steps">
+        <form novalidate="" onsubmit="return false" id="stepForm" class="show-section">
+          <!-- Step 1 -->
+          <fieldset id="step1">
+            <!-- Quesiton Number -->
+            <div class="qNumber">
+              Question <span id="currentStep">1</span> / 4
+            </div>
+
+            <!-- Question -->
+            <h1 class="question">
+              The islands With Coral Covered Surfaces in Bay of Bengal are
+            </h1>
+
+            <!-- Options -->
+            <div class="options">
+              <div class="option animate">
+                <input type="radio" name="op1" value="russia">
+                <label>Russia</label>
+                <span>a</span>
+              </div>
+              <div class="option animate delay-100">
+                <input type="radio" name="op1" value="greece">
+                <label>Greece</label>
+                <span>b</span>
+              </div>
+              <div class="option animate delay-200">
+                <input type="radio" name="op1" value="canada">
+                <label>Canada</label>
+                <span>c</span>
+              </div>
+            </div>
+
+            <!-- Next Prev Button -->
+            <div class="nextPrev">
+              <!-- Footer Next Prev -->
+              <div class="qNumberFooter"><span id="currentStep">1</span>/4</div>
+
+              <button class="next animate" type="button" id="step1btn">
+                <i class="fa-solid fa-caret-right"></i>
+              </button>
+            </div>
+          </fieldset>
+          <!-- Step 2 -->
+          <fieldset id="step2">
+            <!-- Quesiton Number -->
+            <div class="qNumber">
+              Question <span id="currentStep">2</span> / 4
+            </div>
+
+            <!-- Question -->
+            <h1 class="question">
+              Which ancient civilization built the pyramids?
+            </h1>
+
+            <!-- Options -->
+            <div class="options">
+              <div class="option animate">
+                <input type="radio" name="op2" value="Greek">
+                <label>Greek</label>
+                <span>a</span>
+              </div>
+              <div class="option animate delay-100">
+                <input type="radio" name="op2" value="Roman">
+                <label>Roman</label>
+                <span>b</span>
+              </div>
+              <div class="option animate delay-200">
+                <input type="radio" name="op2" value="Egyptian">
+                <label>Egyptian</label>
+                <span>c</span>
+              </div>
+            </div>
+
+            <!-- Next Prev Button -->
+            <div class="nextPrev">
+              <button class="prev animate" type="button">
+                <i class="fa-solid fa-caret-left"></i>
+              </button>
+
+              <!-- Footer Next Prev -->
+              <div class="qNumberFooter"><span id="currentStep">2</span>/4</div>
+
+              <button class="next animate" type="button" id="step2btn">
+                <i class="fa-solid fa-caret-right"></i>
+              </button>
+            </div>
+          </fieldset>
+          <!-- Step 3 -->
+          <fieldset id="step3">
+            <!-- Quesiton Number -->
+            <div class="qNumber">
+              Question <span id="currentStep">3</span> / 4
+            </div>
+
+            <!-- Question -->
+            <h1 class="question">
+              The islands With Coral Covered Surfaces in Bay of Bengal are
+            </h1>
+
+            <!-- Options -->
+            <div class="options">
+              <div class="option animate">
+                <input type="radio" name="op3" value="russia">
+                <label>Russia</label>
+                <span>a</span>
+              </div>
+              <div class="option animate delay-100">
+                <input type="radio" name="op3" value="canada">
+                <label>Canada</label>
+                <span>b</span>
+              </div>
+              <div class="option animate delay-200">
+                <input type="radio" name="op3" value="kenya">
+                <label>Kenya</label>
+                <span>c</span>
+              </div>
+            </div>
+
+            <!-- Next Prev Button -->
+            <div class="nextPrev">
+              <button class="prev animate" type="button">
+                <i class="fa-solid fa-caret-left"></i>
+              </button>
+
+              <!-- Footer Next Prev -->
+              <div class="qNumberFooter"><span id="currentStep">3</span>/4</div>
+
+              <button class="next animate" type="button" id="step3btn">
+                <i class="fa-solid fa-caret-right"></i>
+              </button>
+            </div>
+          </fieldset>
+          <!-- Step 4 -->
+          <fieldset id="step4">
+            <!-- Quesiton Number -->
+            <div class="qNumber">
+              Question <span id="currentStep">4</span> / 4
+            </div>
+
+            <!-- Question -->
+            <h1 class="question">
+              Which ancient civilization built the pyramids?
+            </h1>
+
+            <!-- Options -->
+            <div class="options">
+              <div class="option animate">
+                <input type="radio" name="op4" value="Greek">
+                <label>Greek</label>
+                <span>a</span>
+              </div>
+              <div class="option animate delay-100">
+                <input type="radio" name="op4" value="Roman">
+                <label>Roman</label>
+                <span>b</span>
+              </div>
+              <div class="option animate delay-200">
+                <input type="radio" name="op4" value="Egyptian">
+                <label>Egyptian</label>
+                <span>c</span>
+              </div>
+            </div>
+
+            <!-- Next Prev Button -->
+            <div class="nextPrev">
+              <button class="prev animate" type="button">
+                <i class="fa-solid fa-caret-left"></i>
+              </button>
+
+              <!-- Footer Next Prev -->
+              <div class="qNumberFooter"><span id="currentStep">4</span>/4</div>
+
+              <button class="next animate" type="button" id="sub">
+                <i class="fa-solid fa-caret-right"></i>
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <!-- result -->
+    <div class="loadingresult">
+      <img src="assets/images/loading.gif" alt="loading">
+    </div>
+    <div class="result_page">
+      <div class="container">
+        <div class="result_inner">
+          <!-- header -->
+          <header class="resultheader">
+            Your Result is there
+            <div class="h-border"></div>
+          </header>
+
+          <div class="result_content">
+            <div class="result_msg">
+              <img src="assets/images/check.png" alt="check">
+              Wow! You are Brilliant!
+            </div>
+            <span>your overall score</span>
+            <div class="u_prcnt">70%</div>
+            <div class="prcnt_bar">
+              <div class="fill"></div>
+            </div>
+            <div class="prcnt_bar_lvl">Medium</div>
+            <div class="lvl_overview">
+              <div class="lvl-single">
+                <div class="lvl-color low"></div>
+                <div class="lvl-name">Low</div>
+                <div class="lvl-line"></div>
+              </div>
+              <div class="lvl-single">
+                <div class="lvl-color medium"></div>
+                <div class="lvl-name">Medium</div>
+                <div class="lvl-line"></div>
+              </div>
+              <div class="lvl-single">
+                <div class="lvl-color high"></div>
+                <div class="lvl-name">High</div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="resultfooter"></footer>
+        </div>
+      </div>
+    </div>
+
+    <div id="error"></div>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/Bootstrap/bootstrap.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="assets/js/jQuery/jquery-3.7.1.min.js"></script>
+
+    <!-- Result JS -->
+    <script src="assets/js/result.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

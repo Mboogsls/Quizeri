@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizeri Game</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/Bootstrap/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="assets/css/animation.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+    <main class="overflow-hidden py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="mainHeadingArea animateTop">
+              <h1 class="heading1">Quizeri</h1>
+              <h2 class="heading2">
+                <img src="assets/images/stars.png" alt="Star">
+                Game
+                <img src="assets/images/stars.png" alt="Star">
+              </h2>
+              <h3 class="heading3">
+                <div class="line"></div>
+                <span>START YOUR </span> QUIZ JOURNEY!
+                <div class="line"></div>
+              </h3>
+            </div>
+            <div class="row align-items-center mt-4">
+              <div class="col-md-8">
+                <div class="date">
+                  <div class="inner animateleft">
+                    <a href="./login.html" class="address">Login here</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <ul class="item-list">
+                  <li><span></span>Learn</li>
+                  <li><span></span>Think</li>
+                  <li><span></span>Focus</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form novalidate onsubmit="return false">
+              <article>
+                <h2>Create An Account</h2>
+                <p>
+                  get started on your journey of fun and academic excellence. Improve your chances at competitive thinking.
+                </p>
+              </article>
+              <div id="error"></div> 
+              <fieldset>
+                <div class="inputField">
+                  <input type="text" name="name">
+                  <label>Full Name</label>
+                </div>
+                <div class="inputField">
+                  <input type="text" name="phone">
+                  <label>Cell Number</label>
+                </div>
+                <div class="inputField">
+                  <input type="text" name="email">
+                  <label>Email</label>
+                </div>
+                <div class="inputField">
+                  <input type="password" name="password">
+                  <label>Password</label>
+                </div>
+                <button id="sub">
+                 Get Started<i class="fa-solid fa-right-long"></i>
+                </button>
+              </fieldset>
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/Bootstrap/bootstrap.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="assets/js/jQuery/jquery-3.7.1.min.js"></script>
+
+    <!-- Custom JS -->
+    <!-- <script src="assets/js/custom.js"></script> -->
+    <script>
+      document.getElementById('sub').addEventListener('click', function () {
+        $("#error").html(""); // Clear previous errors
+    
+        let name = document.querySelector('input[name="name"]').value.trim();
+        let phone = document.querySelector('input[name="phone"]').value.trim();
+        let email = document.querySelector('input[name="email"]').value.trim();
+        let password = document.querySelector('input[name="password"]').value.trim();
+    
+        let isValid = true;
+    
+        // Validation Checks
+        if (!name) {
+          $("#error").append('<div class="reveal alert alert-danger">Full Name is required!</div>');
+          isValid = false;
+        }
+        if (!phone || isNaN(phone)) {
+          $("#error").append('<div class="reveal alert alert-danger">Enter a valid phone number!</div>');
+          isValid = false;
+        }
+        if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+          $("#error").append('<div class="reveal alert alert-danger">Enter a valid email address!</div>');
+          isValid = false;
+        }
+        if (!password || password.length < 8) {
+          $("#error").append('<div class="reveal alert alert-danger">Password must be at least 8 characters!</div>');
+          isValid = false;
+        }
+    
+        if (!isValid) return; // Stop execution if validation fails
+    
+        if (localStorage.getItem('userData')) {
+          alert('User data already saved!');
+          
+          
+            window.location.href = './login.html';
+            return;
+        }
+    
+        let formData = { name, phone, email, password };
+    
+        // Save to localStorage
+        localStorage.setItem('userData', JSON.stringify(formData));
+        alert('User data saved successfully!');
+
+      
+
+      });
+    </script>
+    
+  </body>
+</html>

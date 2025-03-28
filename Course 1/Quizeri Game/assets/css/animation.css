@@ -1,0 +1,73 @@
+form::before {
+  animation: slideDown 1s forwards cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@keyframes slideDown {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+.animateTop {
+  position: relative;
+}
+.animateTop::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  animation: AnimeslideTop 1s forwards cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@keyframes AnimeslideTop {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+.animateleft {
+  position: relative;
+  animation-delay: 500ms !important;
+}
+.animateleft::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: 0;
+  animation-delay: 500ms !important;
+
+  right: 0;
+  z-index: 10000;
+  animation: Animeslideleft 1s forwards cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes Animeslideleft {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.delay-100::before {
+  animation-delay: 100ms;
+}
+.delay-200::before {
+  animation-delay: 200ms;
+}
+
+.delay-300::before {
+  animation-delay: 300ms;
+}
+
+.delay-400::before {
+  animation-delay: 400ms;
+}
